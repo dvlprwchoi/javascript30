@@ -56,7 +56,7 @@ function startTimer() {
 }
 
 function minSubmit(e) {
-  // e.preventDefualt();
+  e.preventDefault();
   const mins = this.minutes.value;
   console.log(mins);
   timer(mins * 60);
@@ -64,4 +64,13 @@ function minSubmit(e) {
 }
 
 buttons.forEach((button) => button.addEventListener('click', startTimer));
+
 form.addEventListener('submit', minSubmit);
+
+// document.customForm.addEventListener('submit', function (e) {
+//   e.preventDefault();
+//   const mins = this.minutes.value;
+//   console.log(mins);
+//   timer(mins * 60);
+//   this.reset();
+// });
